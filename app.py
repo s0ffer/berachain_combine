@@ -97,7 +97,7 @@ async def main():
         logger.error("Private keys not found.")
         return
 
-    if len(private_keys) != len(proxies):
+    if len(private_keys) > len(proxies):
         logger.error('Not equal number of proxies and wallets.')
         return
 
