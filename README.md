@@ -2,7 +2,7 @@
 
 This script provides an interface for interacting with Berachain, enabling users to manage tokens, perform swaps, and engage with staking mechanisms. Below is a guide to the functionalities and how to set up and run the script on your system.
 
-https://github.com/user-attachments/assets/7ac9e0c1-3791-42f9-bda3-e3c172c52d84
+![show](https://github.com/user-attachments/assets/68197c2d-a2d3-486c-ba6c-f12b11a85915)
 
 ---
 
