@@ -250,9 +250,7 @@ class Berachain(Base):
 
         if await self.approve_interface(token_address=Contracts.iBGT.address,
                                         spender=Contracts.ISLAND_ROUTER.address,
-                                        amount=amount_0_max_ibgt,
-                                        max=True
-                                        ):
+                                        amount=amount_0_max_ibgt):
             logger.info(f'Approved iBGT for router pool | {self.client.account.address}')
         else:
             logger.error('Failed to approve iBGT')
@@ -264,8 +262,8 @@ class Berachain(Base):
             amount_0_max_ibgt.Wei,
             amount_1_max_bera.Wei).call())[2]
 
-        amount_0_min_ibgt = int(amount_0_max_ibgt.Wei / 1.01010101)
-        amount_1_min_bera = int(amount_1_max_bera.Wei / 1.01010101)
+        amount_0_min_ibgt = int(amount_0_max_ibgt.Wei / 1.01)
+        amount_1_min_bera = int(amount_1_max_bera.Wei / 1.01)
 
         params = TxArgs(
             island=Contracts.KODIAK_VAULT.address,
